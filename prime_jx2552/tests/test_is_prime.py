@@ -44,6 +44,10 @@ def test_generate_primes():
     expected_primes_up_to_20 = [2, 3, 5, 7, 11, 13, 17, 19]
     assert generate_primes(20) == expected_primes_up_to_20
 
+
+# In[3]:
+
+
 # Parameterized test for is_prime function
 @pytest.mark.parametrize("number, expected_result", [
     (2, True), 
@@ -59,6 +63,10 @@ def test_generate_primes():
 def test_is_prime_param(number, expected_result):
     assert is_prime(number) == expected_result
 
+
+# In[4]:
+
+
 # Parameterized test for generate_primes function
 @pytest.mark.parametrize("limit, expected_primes", [
     (10, [2, 3, 5, 7]),                 
@@ -70,6 +78,10 @@ def test_is_prime_param(number, expected_result):
 
 def test_generate_primes(limit, expected_primes):
     assert generate_primes(limit) == expected_primes
+
+
+# In[5]:
+
 
 # Integration test for prime generation and correctness check
 def test_prime_integration():
@@ -85,4 +97,12 @@ def test_prime_integration():
     for num in range(4, limit + 1):
         if num not in generated_primes:
             assert is_prime(num) == False
+
+
+# In[6]:
+
+
+# Run the tests with verbosity (-vv)
+if __name__ == "__main__":
+    pytest.main(["-vv"])
 
