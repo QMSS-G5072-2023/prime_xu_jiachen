@@ -7,6 +7,8 @@
 import math
 import pytest
 
+from prime_jx2552 import is_prime
+
 # is_prime function
 def is_prime(n):
     if n <= 1:
